@@ -1,5 +1,6 @@
 import React from "react";
 const Home = React.lazy(() => import("../pages/Home/Home"));
+const Staffs = React.lazy(() => import("../pages/Staffs/Staffs"));
 
 const routeHome = [
     {
@@ -8,5 +9,11 @@ const routeHome = [
         element: <Home />,
     },
 ];
-
-export { routeHome };
+const routeStaffs = [
+    {
+        exact: false,
+        path: "/staffs",
+        element: <Staffs />,
+    },
+];
+export { routeHome, routeStaffs };

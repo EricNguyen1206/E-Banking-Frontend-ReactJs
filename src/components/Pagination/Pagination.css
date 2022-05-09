@@ -1,0 +1,54 @@
+.pagination {
+    position: relative;
+    width: fit-content;
+    height: 2rem;
+    line-height: 1;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    user-select: none;
+}
+
+.pagination .btn-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.pagination .btn-group .btn__item {
+    height: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.pagination .btn-group .arrow div {
+    width: 2rem;
+    padding-top: 0.2rem;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.pagination .btn-group .arrow div:hover {
+    opacity: 1;
+}
+
+.pagination .btn-group .page__list {
+    display: flex;
+    height: 100%;
+}
+
+.pagination .btn-group .page__list .page__item {
+    width: 2.4rem;
+    height: 100%;
+    align-self: center;
+    opacity: .5;
+}
+
+.pagination .btn-group .page__list .page__item:nth-child(2) {
+    opacity: 1;
+}
+
+.pagination .btn-group .page__list .page__item span {
+    height: 100%;
+    display: block;
+    padding-top: 0.2rem;
+}

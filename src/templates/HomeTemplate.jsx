@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Topbar, Sidebar } from "../components";
+import "./HomeTemplate.css";
 
 const LayoutHome = (props) => {
     const [toggleNav, setToggleNav] = useState(false);

@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import AutoGraphOutlinedIcon from "@mui/icons-material/AutoGraphOutlined";
@@ -7,11 +7,15 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
 const sidebar = [
-    { title: "Thống kê", icon: <AutoGraphOutlinedIcon /> },
-    { title: "Khách hàng", icon: <GroupOutlinedIcon /> },
-    { title: "Nhân viên", icon: <ContactMailOutlinedIcon /> },
-    { title: "Tài khoản", icon: <AccountCircleOutlinedIcon /> },
-    { title: "Đăng xuất", icon: <ExitToAppOutlinedIcon /> },
+    { title: "Thống kê", icon: <AutoGraphOutlinedIcon />, link: "/" },
+    { title: "Khách hàng", icon: <GroupOutlinedIcon />, link: "/customers" },
+    { title: "Nhân viên", icon: <ContactMailOutlinedIcon />, link: "/staffs" },
+    {
+        title: "Tài khoản",
+        icon: <AccountCircleOutlinedIcon />,
+        link: "/account",
+    },
+    { title: "Đăng xuất", icon: <ExitToAppOutlinedIcon />, link: "/" },
 ];
 function Sidebar({ toggleNav, setToggleNav }) {
     const handleToggleNav = () => {
@@ -29,10 +33,10 @@ function Sidebar({ toggleNav, setToggleNav }) {
                 <ul>
                     {sidebar.map((item, index) => (
                         <li key={index}>
-                            <a href="#">
+                            <Link to={item.link}>
                                 <span className="icon">{item.icon}</span>
                                 <span className="title">{item.title}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
