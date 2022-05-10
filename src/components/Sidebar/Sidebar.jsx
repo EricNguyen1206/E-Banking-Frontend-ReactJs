@@ -15,7 +15,7 @@ const sidebar = [
         icon: <AccountCircleOutlinedIcon />,
         link: "/account",
     },
-    { title: "Đăng xuất", icon: <ExitToAppOutlinedIcon />, link: "/" },
+    { title: "Đăng xuất", icon: <ExitToAppOutlinedIcon />, link: "/login" },
 ];
 function Sidebar({ toggleNav, setToggleNav }) {
     const handleToggleNav = () => {
