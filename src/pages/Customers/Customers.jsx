@@ -1,5 +1,7 @@
-import React from "react";
-const users = [
+import { Pagination, Table } from "../../components";
+import "./Customers.css";
+
+const customers = [
     {
         id: "NV01",
         email: "email1@gmail.com",
@@ -74,14 +76,13 @@ const users = [
 
 function User() {
     return (
-        <div className="users">
-            <div className="cardHeader">
+        <div className="customers">
+            <div className="customers__header">
                 <h2>Khách hàng</h2>
-                <a href="#" className="btn">
-                    View All
-                </a>
+                <h3>Chi nhánh tân định</h3>
             </div>
-            <table>
+            <Table rows={customers} />
+            {/* <table className="customers_list">
                 <thead>
                     <tr>
                         <td>Tài khoản</td>
@@ -93,18 +94,14 @@ function User() {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((item, index) => (
+                    {customers.map((item, index) => (
                         <tr key={index}>
-                            <td>
-                                {item.id}{" "}
-                                <span className="email">{item.email}</span>
+                            <td className="account">
+                                {item.id} <span>{item.email}</span>
                             </td>
-
-                            <td>
+                            <td className="name">
                                 {item.lastname}
-                                <span className="firstname">
-                                    {item.firstname}
-                                </span>
+                                <span>{item.firstname}</span>
                             </td>
                             <td>{item.address}</td>
                             <td>
@@ -121,7 +118,10 @@ function User() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table> */}
+            <div className="staff__pagination">
+                <Pagination background="#fff" />
+            </div>
         </div>
     );
 }

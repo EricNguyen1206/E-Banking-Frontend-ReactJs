@@ -2,7 +2,7 @@ import React from "react";
 import "./Account.css";
 
 function Account() {
-    return <div>abc</div>;
+    return <div className="account"></div>;
 }
 
 export default Account;

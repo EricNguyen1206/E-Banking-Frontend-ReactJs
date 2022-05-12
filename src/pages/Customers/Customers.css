@@ -1,0 +1,73 @@
+.customers {
+    position: relative;
+    width: 100%;
+}
+
+.customers__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.customers_list {
+    position: relative;
+    width: 98%;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: var(--white);
+    border-radius: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.customers_list thead td {
+    font-weight: 600;
+}
+.customers_list tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.customers_list tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+.customers_list tr td {
+    padding: 10px;
+}
+.customers_list tr .account {
+    display: flex;
+    flex-direction: column;
+}
+
+.customers_list tr .account span {
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.customers_list tr .name {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.customers_list tr .name span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.staff__pagination {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
